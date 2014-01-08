@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>Telerik Academy - Accordion JS</title>
+			<link rel="stylesheet" href="css/styles.css">
+			<script src="js/TelerikAcademy.Accordion.js"></script>
+	</head>
+	<body>
+		<div id="accordion-holder"></div>
+		<div id="copied-accordion-holder"></div>
+		
+		<script type="text/javascript">
+			var accordion = controls.getAccordion("#accordion-holder");
+			
+			var webItem = accordion.add("Web");
+			webItem.add("HTML");
+			var mobileItem = accordion.add("Mobile");
+			mobileItem.add("iOS");
+			accordion.add("Desktop");
+			accordion.add("Embedded");	
+			accordion.render();
+
+			var serialized = accordion.serialize();
+			localStorage.setItem("accordion", JSON.stringify(serialized));
+
+			var data = localStorage.getItem("accordion");
+			console.log(JSON.parse(data));
+		</script>
+	</body>
+</html>

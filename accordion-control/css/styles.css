@@ -1,0 +1,12 @@
+#accordion-holder ul {
+	list-style-type: none;
+}
+
+#accordion-holder ul li a {
+	color: black;
+	text-decoration: none;
+}
+
+#accordion-holder ul li:hover > a {
+	text-decoration: underline;
+}
